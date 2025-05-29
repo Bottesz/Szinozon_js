@@ -1,47 +1,37 @@
-import { tippLista, visszajelzesLista } from "./listak.js";
+import Tipp from "./Tipp.js";
+import Visszajelzes from "./Visszajelzes.js";
 
-export default class Jateksor {
-    #tippLista=[]; 
-    #visszajelzesLista=[]; 
-    #jatekter; 
+export default class JatekSor {
+    #tippLista; 
+    #visszajelzesLista; 
+    #szElem; 
 
     constructor(tippLista, visszajelzesLista, szElem) {
         this.#tippLista = tippLista; 
         this.#visszajelzesLista = visszajelzesLista; 
-        this.#jatekter = szElem;
+        this.#szElem = szElem; 
     }
 
-    megjelenit() {
-        this.#jatekter.innerHTML = "";
+    megjelenites() {
+        
+        this.#szElem.innerHTML = "";
 
-        const tippContainer = document.createElement("div");
-        tippContainer.classList.add("tipp-container");
-        this.#tippLista.forEach((row) => {
-            const rowElem = document.createElement("div");
-            rowElem.classList.add("tipp-row");
-            row.forEach((tipp) => {
-                const tippElem = document.createElement("div");
-                tippElem.textContent = tipp;
-                tippElem.classList.add("tipp-item");
-                rowElem.appendChild(tippElem);
-            });
-            tippContainer.appendChild(rowElem);
-        });
-        this.#jatekter.appendChild(tippContainer);
+        
+        this.#tippLista.forEach((row, rowIndex) => {
+            const tippElem = document.createElement("div");
+            tippElem.classList.add("sor");
 
-        const visszajelzesContainer = document.createElement("div");
-        visszajelzesContainer.classList.add("visszajelzes-container");
-        this.#visszajelzesLista.forEach((row) => {
-            const rowElem = document.createElement("div");
-            rowElem.classList.add("visszajelzes-row");
-            row.forEach((visszajelzes) => {
-                const visszajelzesElem = document.createElement("div");
-                visszajelzesElem.textContent = visszajelzes;
-                visszajelzesElem.classList.add("visszajelzes-item");
-                rowElem.appendChild(visszajelzesElem);
-            });
-            visszajelzesContainer.appendChild(rowElem);
+            const visszajelzesElem = document.createElement("div");
+            visszajelzesElem.classList.add("visszajelzes");
+           
+            const tipp = new Tipp(row, tippElem);
+            tipp.megjelenit();
+            
+            const visszajelzes = new Visszajelzes(this.#visszajelzesLista[rowIndex], visszajelzesElem);
+            visszajelzes.updateVisszajelzes();
+
+            this.#szElem.appendChild(tippElem);
+            this.#szElem.appendChild(visszajelzesElem);
         });
-        this.#jatekter.appendChild(visszajelzesContainer);
     }
 }

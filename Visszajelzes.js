@@ -6,7 +6,7 @@ export default class Visszajelzes {
 
     constructor(visszajelzesLista) {
         this.#visszajeltesLista = visszajelzesLista;
-        this.#szElem = document.querySelector("#visszajelzes");
+        this.#szElem = document.querySelector(".visszajelzes");
     }
 
     getVisszajelzes(sor, oszlop) {
@@ -15,6 +15,7 @@ export default class Visszajelzes {
 
     setVisszajelzes(sor, oszlop, szin) {
         this.#visszajeltesLista [sor][oszlop] = szin;
+        this.updateVisszajelzes();
     }
 
     resetVisszajelzes() {
@@ -23,5 +24,18 @@ export default class Visszajelzes {
                 this.#visszajeltesLista [i][j] = "gray";
             }
         }
+        this.updateVisszajelzes();
+    }
+    updateVisszajelzes() {
+        this.#szElem.innerHTML = "";
+        this.#visszajeltesLista.forEach((sor) => {
+            sor.forEach((szin)=>{
+                const vElem=document.createElement("div");
+                vElem.classList.add("vElem");
+                vElem.style.backgeoudndColor=szin;
+                this.#szElem.appendChild(vElem);
+            });
+            
+        });
     }
 }

@@ -18,7 +18,7 @@ export default class Tipp {
         this.#tippLista.forEach((tipp) => {
             const tippElem = document.createElement("div");
             tippElem.textContent = tipp; 
-            tippElem.classList.add("tipp-item");
+            tippElem.classList.add("elem");
             this.#szElem.appendChild(tippElem); 
         });
     }
