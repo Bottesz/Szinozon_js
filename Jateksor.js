@@ -16,7 +16,7 @@ export default class JatekSor {
     #megjelenit() {
         let html=`<div class="jateksor"></div>`;
         this.#szElem.insertAdjacentHTML("beforeend", html);
-        this.sorszElem = this.#szElem.querySelector(".jatekter.jateksor:last-child");
+        this.sorszElem =document.querySelector(".jatekter.jateksor:last-child");
         new Visszajelzes(this.#visszajelzesLista, this.sorszElem);
         new Tipp(this.#tippLista, this.sorszElem);
     }
