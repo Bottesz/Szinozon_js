@@ -7,7 +7,7 @@
 
 
 main{
-    max-width: 100px;
+    max-width: 250px;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -50,44 +50,45 @@ main{
 .szin{
     aspect-ratio: 1;
     border: 1px solid white;
+    border-radius: 100;
     cursor: grab;
     gap: 2px;
 }
 
 
-.vElem .elem .szin{
+.vElem, .elem .szin{
     aspect-ratio: 3;
-    border: 2px solid solid grey;
+    border: 2px solid grey;
 }
 
 
 
-.szin:nth-child(){
+.szin:nth-child(1){
      
         background-color: red;
       
 }
-.szin:nth-child(){
+.szin:nth-child(2){
      
     background-color: green;
   
 }
-.szin:nth-child(){
+.szin:nth-child(3){
      
     background-color: orange;
   
 }
-.szin:nth-child(){
+.szin:nth-child(4){
      
     background-color: yellow;
   
 }
-.szin:nth-child(){
+.szin:nth-child(5){
      
     background-color: blue;
   
 }
-.szin:nth-child(){
+.szin:nth-child(6){
      
     background-color: purple;
   
