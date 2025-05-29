@@ -1,10 +1,10 @@
-import { szinekLista } from "./listak.js";
+
 export default class Generalt{
     #generaltLista=[];
     #szElem;
     constructor(generaltLista,szElem){
         this.#generaltLista=generaltLista;
-        this.#szElem=szElem
+        this.#szElem=szElem;
     }
     megjelenit(){
         let html = `<div class="visszajelzes"></div>

@@ -1,6 +1,6 @@
 import JatekSor from "./JatekSor.js";
 import Generalt from "./Generalt.js";
-import { szinekLista, generaltLista, visszajelzesListaM, tippListaM } from "./listak.js";
+import { szinekLista, generaltLista, visszajelzesLista, tippLista } from "./listak.js";
 
 
 export default class Jatek {
