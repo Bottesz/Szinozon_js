@@ -1,24 +1,24 @@
-import {szinekLista } from "./listak.js";
-
-export default class Jatek{
+import { szinekLista } from "./listak.js";
+export default class Generalt{
+    #generaltLista=[];
     #szElem;
-
-    constructor(generaltLista){
-        this.#szElem = generaltLista;
-        this.#general();
-
+    constructor(generaltLista,szElem){
+        this.#generaltLista=generaltLista;
+        this.#szElem=szElem
     }
-    
-    #general() {
-        for(let i = 0; i < 4; i++) {
-            const veletlen = Math.floor(Math.random() * szinekLista.length);
-            this.#szElem[i] = szinekLista[veletlen];
+    megjelenit(){
+        let html = `<div class="visszajelzes"></div>
+                    <div class="sor">
+                        <div class="elem" style="background-color:${this.#generaltLista[0]}"}></div>
+                        <div class="elem" style="background-color:${this.#generaltLista[1]}"}></div>
+                        <div class="elem" style="background-color:${this.#generaltLista[2]}"}></div>
+                        <div class="elem" style="background-color:${this.#generaltLista[3]}"}></div>
+                    </div>`;
+        this.#szElem.insertAdjacentHTML("beforeend", html);
+        for (let index = 0; index < this.#generaltLista.length; index++) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [lista[i], lista[j]] = [lista[j], lista[i]]; 
+            
         }
-    
     }
-
-    megjelenit() {
-        return this.#szElem;
-    }
-
 }
