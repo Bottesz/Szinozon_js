@@ -4,7 +4,8 @@ export default class Generalt{
     #szElem;
     constructor(generaltLista,szElem){
         this.#generaltLista=generaltLista;
-        this.#szElem=szElem;
+        this.#szElem=document.querySelector(".generalt .jatekter");
+        this.megjelenit();
     }
     megjelenit(){
         let html = `<div class="visszajelzes"></div>
