@@ -1,11 +1,12 @@
 import { szinekLista, generaltLista, tippLista, visszajelzesLista } from "./listak.js";
 import Generalt from "./Generalt.js";
+import JatekSor from "./Jateksor.js";
 
 export default class Jatek {
-    #szinekLista;
-    #generaltLista;
-    #visszajelzesListaM;
-    #tippLista;
+    #szinekLista=[];
+    #generaltLista=[];
+    #visszajelzesListaM=[];
+    #tippLista=[];
     #jatekter;
     #sor;
     #oszlop;

@@ -1,25 +1,22 @@
-import { tippLista } from "./listak.js";
 
 export default class Tipp {
-
-    #tippLista=[]; 
-    #szElem;   
-
+    #tippLista = [];
+    #szElem;
     constructor(tippLista, szElem) {
-        this.#tippLista = tippLista;
-        this.#szElem = szElem;     
+      this.#tippLista = tippLista;
+      this.#szElem = szElem;
+      this.#megjelenit();
     }
-
-    megjelenit() {
-        
-        this.#szElem.innerHTML = "";
-
-        
-        this.#tippLista.forEach((tipp) => {
-            const tippElem = document.createElement("div");
-            tippElem.textContent = tipp; 
-            tippElem.classList.add("elem");
-            this.#szElem.appendChild(tippElem); 
-        });
+  
+    #megjelenit() {
+      let html = `<div class="sor">
+                    <div class="elem" STYLE="background-color:${this.#tippLista[0]}"}></div>
+                    <div class="elem" STYLE="background-color:${this.#tippLista[1]}"}></div>
+                    <div class="elem" STYLE="background-color:${this.#tippLista[2]}"}></div>
+                    <div class="elem" STYLE="background-color:${this.#tippLista[3]}"}></div>
+                  </div>`;
+  
+      this.#szElem.insertAdjacentHTML("beforeend", html);
     }
-}
+  }
+  
