@@ -4,97 +4,142 @@
     padding: 0;
 }
 
-
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 main{
     max-width: 1000px;
     margin: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2px;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-
-
-.generalt, .sor{
-    padding: 10px;
-    display:grid ;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2px;
+.ball {
+    padding: 20px;
 }
 
-
-.jatekter{
+.generalt {
+    margin-bottom: 20px;
     padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+}
+
+.jatekter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.jateksor {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    border: 2px solid solid grey;
-}
-.jateksor{
+    grid-template-columns: 80px 1fr;
+    gap: 10px;
     padding: 10px;
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    border: 1px solid lightgray;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
-.visszajelzes{
+.visszajelzes {
     display: grid;
-    padding: 10px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 5px;
+    padding: 5px;
 }
 
-.szinvalaszto{
+.sor {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.vElem, .elem {
+    aspect-ratio: 1;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    cursor: grab;
+    transition: all 0.3s ease;
+}
+
+.vElem {
+    width: 20px;
+}
+
+.elem {
+    width: 40px;
+}
+
+.jobb {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info {
+    padding: 15px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    min-height: 50px;
+    text-align: center;
+}
+
+.gombok {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.gombok button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.gombok button:hover {
+    background-color: #45a049;
+}
+
+.szinvalaszto {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 2px;
-    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
 }
 
-.szin{
+.szin {
     aspect-ratio: 1;
-    border: 1px solid white;
-    cursor: grab;
-    gap: 2px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-
-.vElem, .elem, .szin{
-    aspect-ratio: 1;
-    border: 2px solid grey;
+.szin:hover {
+    transform: scale(1.1);
 }
 
-
-
-.szin:nth-child(1){
-     
-        background-color: red;
-      
-}
-.szin:nth-child(2){
-     
-    background-color: green;
-  
-}
-.szin:nth-child(3){
-     
-    background-color: orange;
-  
-}
-.szin:nth-child(4){
-     
-    background-color: yellow;
-  
-}
-.szin:nth-child(5){
-     
-    background-color: blue;
-  
-}
-.szin:nth-child(6){
-     
-    background-color: purple;
-  
-}
+.szin:nth-child(1) { background-color: red; }
+.szin:nth-child(2) { background-color: green; }
+.szin:nth-child(3) { background-color: orange; }
+.szin:nth-child(4) { background-color: yellow; }
+.szin:nth-child(5) { background-color: blue; }
+.szin:nth-child(6) { background-color: purple; }
