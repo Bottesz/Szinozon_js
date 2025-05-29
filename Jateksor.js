@@ -2,8 +2,8 @@ import Tipp from "./Tipp.js";
 import Visszajelzes from "./Visszajelzes.js";
 
 export default class JatekSor {
-    #tippLista; 
-    #visszajelzesLista; 
+    #tippLista=[]; 
+    #visszajelzesLista=[]; 
     #szElem; 
 
     constructor(tippLista, visszajelzesLista, szElem) {
