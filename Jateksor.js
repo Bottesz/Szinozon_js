@@ -18,6 +18,6 @@ export default class JatekSor {
         this.#szElem.insertAdjacentHTML("beforeend", html);
         this.sorszElem = this.#szElem.querySelector(".jateksor:last-child");
         new Visszajelzes(this.#visszajelzesLista, this.sorszElem);
-        new Tipp(this.#tippLista, this.sorszElem);
+        new Tipp(this.#tippLista, this.sorszElem)
     }
 }
