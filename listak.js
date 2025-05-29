@@ -5,6 +5,6 @@ export default class Listak{
 
     visszajelzesLista=["gray","gray","gray","gray"];
 
-    szinekLista=["red","blue","green","yellow","orange","purple"]
+    szinekLista=["red","blue","green","yellow","orange","purple"];
 }
 
