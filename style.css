@@ -1,0 +1,100 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+main{
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+}
+
+
+
+.generalt, .sor{
+    padding: 10px;
+    display:grid ;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+}
+
+
+.jatekter{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 2px solid solid grey;
+}
+.jateksor{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    border: 1px solid lightgray;
+}
+
+.visszajelzes{
+    display: grid;
+    padding: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5px;
+}
+
+.szinvalaszto{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2px;
+    justify-content: center;
+}
+
+.szin{
+    aspect-ratio: 1;
+    border: 1px solid white;
+    cursor: grab;
+    gap: 2px;
+}
+
+
+.vElem, .elem, .szin{
+    aspect-ratio: 1;
+    border: 2px solid grey;
+}
+
+
+
+.szin:nth-child(1){
+     
+        background-color: red;
+      
+}
+.szin:nth-child(2){
+     
+    background-color: green;
+  
+}
+.szin:nth-child(3){
+     
+    background-color: orange;
+  
+}
+.szin:nth-child(4){
+     
+    background-color: yellow;
+  
+}
+.szin:nth-child(5){
+     
+    background-color: blue;
+  
+}
+.szin:nth-child(6){
+     
+    background-color: purple;
+  
+}
