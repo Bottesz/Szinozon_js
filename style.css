@@ -14,9 +14,7 @@ main{
     gap: 2px;
 }
 
-div{
-    
-}
+
 
 .generalt, .sor{
     padding: 10px;
@@ -41,7 +39,51 @@ div{
     gap: 5px;
 }
 
-.vElem .elem{
+.szinvalaszto{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2px;
+    justify-content: center;
+}
+
+
+
+
+.vElem .elem .szin{
     aspect-ratio: 3;
     border: 2px solid solid grey;
+}
+
+
+
+.szin:nth-child(){
+     
+        background-color: red;
+      
+}
+.szin:nth-child(){
+     
+    background-color: green;
+  
+}
+.szin:nth-child(){
+     
+    background-color: orange;
+  
+}
+.szin:nth-child(){
+     
+    background-color: yellow;
+  
+}
+.szin:nth-child(){
+     
+    background-color: blue;
+  
+}
+.szin:nth-child(){
+     
+    background-color: purple;
+  
 }
