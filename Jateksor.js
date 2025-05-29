@@ -1,4 +1,1 @@
-class JatekSor {
-
-
-}
+import Listak from "./listak.js";
