@@ -17,7 +17,7 @@ export default class Generalt{
         this.#szElem.insertAdjacentHTML("beforeend", html);
         for (let index = 0; index < this.#generaltLista.length; index++) {
             const j = Math.floor(Math.random() * (i + 1));
-            [lista[i], lista[j]] = [lista[j], lista[i]]
+            [lista[i], lista[j]] = [lista[j], lista[i]]; 
             
         }
     }

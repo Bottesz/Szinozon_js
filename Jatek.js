@@ -41,4 +41,3 @@ export default class Jatek {
   szin6Esemenykezelo() {}
   visszajelzes() {}
 }
-;

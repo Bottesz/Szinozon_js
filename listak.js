@@ -26,4 +26,4 @@ export const visszajelzesLista=[
 ]
 
 
-
+/*tippLista[0][1]*/

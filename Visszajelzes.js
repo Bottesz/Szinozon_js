@@ -15,7 +15,7 @@ export default class Visszajelzes {
                     <div class="vElem" STYLE="background-color:${this.#visszajelzesLista[3]}"}></div>
                   </div>`;
   
-      this.#szElem.insertAdjacentHTML("beforeend", html)
+      this.#szElem.insertAdjacentHTML("beforeend", html);
     }
   }
   

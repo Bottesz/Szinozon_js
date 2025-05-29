@@ -16,7 +16,7 @@ export default class Tipp {
                     <div class="elem" STYLE="background-color:${this.#tippLista[3]}"}></div>
                   </div>`;
   
-      this.#szElem.insertAdjacentHTML("beforeend", html)
+      this.#szElem.insertAdjacentHTML("beforeend", html);
     }
   }
   
