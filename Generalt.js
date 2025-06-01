@@ -10,7 +10,7 @@ export default class Generalt {
   megjelenit() {
     const html = `
       <div class="visszajelzes"></div>
-      <div class="sor">
+      <div class="sor" style="visibility: hidden">
         <div class="elem" style="background-color: ${this.#generaltLista[0]}"></div>
         <div class="elem" style="background-color: ${this.#generaltLista[1]}"></div>
         <div class="elem" style="background-color: ${this.#generaltLista[2]}"></div>

@@ -13,15 +13,17 @@ export default class Jatek {
   constructor() {
    
     this.#szinekLista = szinekLista;
-    this.#generaltLista = generaltLista;
+    
     this.#visszajelzesListaM = visszajelzesLista;
     this.#tippListaM = tippLista;
     
     this.#jatekter = document.querySelector(".jatekter");
+    this.#generaltLista = [];
     this.generaltListaEloallit();
     this.megjelenit();
     this.szinValasztoEsemenyek();
     this.ellenorizTippet();
+    this.megoldasMegjelenitese();
   }
 
   megjelenit() {
@@ -37,6 +39,9 @@ export default class Jatek {
     const szinLista = [...this.#szinekLista];
     szinLista.sort(() => Math.random() - 0.5);
     this.#generaltLista = szinLista.slice(0, 4);
+    this.#generaltLista = Array.from({ length: 4 }, () =>
+    this.#szinekLista[Math.floor(Math.random() * this.#szinekLista.length)]
+  );
   }
   
   
@@ -95,11 +100,13 @@ export default class Jatek {
     }
   }
 
- 
-  const visszajelzes = [];
-  for (let i = 0; i < fekete; i++) visszajelzes.push("black");
-  for (let i = 0; i < feher; i++) visszajelzes.push("white");
-  while (visszajelzes.length < 4) visszajelzes.push("gray");
+
+
+
+const visszajelzes = [];
+for (let i = 0; i < fekete; i++) visszajelzes.push("black");
+for (let i = 0; i < feher; i++) visszajelzes.push("gray");
+while (visszajelzes.length < 4) visszajelzes.push("white");
 
   this.#visszajelzesListaM[this.#aktualisSorIndex] = visszajelzes;
 
@@ -120,6 +127,13 @@ frissitJatekSort() {
     new JatekSor(this.#visszajelzesListaM[index], this.#tippListaM[index], jatekter);
   }
 }
+megoldasMegjelenitese() {
+  const generaltElem = document.querySelector(".generalt .sor");
+  if (generaltElem) {
+    generaltElem.style.visibility = "visible";
+  }
+}
+
 
 
 }
