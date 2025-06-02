@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  
 }
 
 body {
@@ -11,6 +12,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url("hatter.jpeg");
+  background-position: center;
 }
 
 main {
@@ -23,6 +26,9 @@ main {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+   background-image: url("hatter.jpeg");
+  background-position: center;
+
 }
 
 .ball {
@@ -34,6 +40,9 @@ main {
   padding: 10px;
   background-color: #f8f8f8;
   border-radius: 5px;
+  background-image: url("fedo.PNG");
+  background-position: center;
+  
 }
 
 .jatekter {
@@ -94,6 +103,11 @@ main {
   border-radius: 5px;
   min-height: 50px;
   text-align: center;
+  background-image: url("fedo.PNG");
+  background-position: center;
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
 }
 
 .gombok {
@@ -123,6 +137,8 @@ main {
   padding: 10px;
   background-color: #f8f8f8;
   border-radius: 5px;
+  background-image: url("szinekfeloli.PNG");
+  background-position: center;
 }
 
 .szin {
