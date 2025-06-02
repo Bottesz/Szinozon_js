@@ -1,4 +1,4 @@
-import JatekSor from "./JatekSor.js";
+import JatekSor from "./Jateksor.js";
 import Generalt from "./Generalt.js";
 import { szinekLista, generaltLista, visszajelzesLista, tippLista } from "./listak.js";
 

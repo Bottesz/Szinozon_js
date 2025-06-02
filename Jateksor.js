@@ -14,10 +14,10 @@ export default class JatekSor {
   }
 
   #megjelenit() {
-    // Új jateksor elem beszúrása a megadott konténerbe
+    
     const html = `<div class="jateksor"></div>`;
     this.#szElem.insertAdjacentHTML("beforeend", html);
-    // A frissen beszúrt .jateksor elem kiválasztása
+    
     const jateksorElem = this.#szElem.querySelector(".jateksor:last-child");
     new Visszajelzes(this.#visszajelzesLista, jateksorElem);
     new Tipp(this.#tippLista, jateksorElem);
