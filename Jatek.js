@@ -100,9 +100,6 @@ export default class Jatek {
     }
   }
 
-
-
-
 const visszajelzes = [];
 for (let i = 0; i < fekete; i++) visszajelzes.push("black");
 for (let i = 0; i < feher; i++) visszajelzes.push("gray");
@@ -110,9 +107,7 @@ while (visszajelzes.length < 4) visszajelzes.push("white");
 
   this.#visszajelzesListaM[this.#aktualisSorIndex] = visszajelzes;
 
-
   this.frissitJatekSort();
-
 
   if (fekete === 4) {
     alert("Gratulálok! Kitaláltad!");

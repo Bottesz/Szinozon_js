@@ -9,12 +9,13 @@ export default class Generalt {
   
   megjelenit() {
     const html = `
-      <div class="visszajelzes"></div>
-      <div class="sor" style="visibility: hidden">
-        <div class="elem" style="background-color: ${this.#generaltLista[0]}"></div>
-        <div class="elem" style="background-color: ${this.#generaltLista[1]}"></div>
-        <div class="elem" style="background-color: ${this.#generaltLista[2]}"></div>
-        <div class="elem" style="background-color: ${this.#generaltLista[3]}"></div>
+      <div class="visszajelzesek">
+        <div class="sor" style="visibility: hidden">
+          <div class="elem" style="background-color: ${this.#generaltLista[0]}"></div>
+          <div class="elem" style="background-color: ${this.#generaltLista[1]}"></div>
+          <div class="elem" style="background-color: ${this.#generaltLista[2]}"></div>
+          <div class="elem" style="background-color: ${this.#generaltLista[3]}"></div>
+        </div>
       </div>`;
     this.#szElem.insertAdjacentHTML("beforeend", html);
   }
